@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: digital-wallet
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/wallet}
+    username: ${SPRING_DATASOURCE_USERNAME:wallet}
+    password: ${SPRING_DATASOURCE_PASSWORD:wallet_dev_only}
+    hikari:
+      maximum-pool-size: 20
+  flyway:
+    enabled: true
+server:
+  error:
+    include-message: never
